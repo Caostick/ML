@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  
+  <Type Name="ml::Vector">
+    <DisplayString>Vector({m_Length})</DisplayString>
+    <Expand>
+      <Item Name="[Length]" ExcludeView="simple">m_Length</Item>
+      <ArrayItems>
+        <Size>m_Length</Size>
+        <ValuePointer>m_Elements</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="ml::Matrix">
+    <DisplayString>Matrix({m_Cols} x {m_Rows})</DisplayString>
+    <Expand>
+      <Item Name="[Cols]" ExcludeView="simple">m_Cols</Item>
+      <Item Name="[Rows]" ExcludeView="simple">m_Rows</Item>
+      <ArrayItems>
+        <Rank>2</Rank>
+        <Size> $i==0 ? m_Cols : m_Rows </Size>
+        <ValuePointer>m_Elements</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+  
+</AutoVisualizer>
