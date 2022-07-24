@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.1)
 
-option(ML_TESTS "Enable build of tests" ON)
+option(ML_TESTS "Enable build of tests" OFF)
 
 set(PROJECT_NAME ML)
 set(CPP_VERSION 17)
