@@ -257,8 +257,6 @@ TEST_CASE("Iris Fisher Test") {
 
 		const uint64_t idxRes = GetMaxIdx(out.Data(), out.Length());
 
-		const bool succeeded = idxRes == dataset[idx].Idx;
-
 		REQUIRE((out == utResults[i]));
 		REQUIRE(idxRes == dataset[idx].Idx);
 	}

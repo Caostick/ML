@@ -1,3 +1,4 @@
+.vs/
 build/
 ThirdParty/conan.lock
 ThirdParty/conanbuildinfo.cmake
